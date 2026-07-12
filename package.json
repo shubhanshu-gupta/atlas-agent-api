@@ -1,0 +1,27 @@
+{
+  "name": "atlas-agent-api",
+  "version": "0.1.0",
+  "description": "Stablecoin Atlas data as an agent-payable x402/USDC API (Circle Gateway Nanopayments)",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "start": "tsx --env-file=.env src/server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@circle-fin/x402-batching": "^3.2.0",
+    "@x402/core": "latest",
+    "@x402/evm": "latest",
+    "express": "^4.19.0",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

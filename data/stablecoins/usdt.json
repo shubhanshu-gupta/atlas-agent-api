@@ -1,0 +1,33 @@
+{
+  "ticker": "USDT",
+  "name": "Tether USD",
+  "peg_currency": "USD",
+  "issuer": { "name": "Tether", "jurisdictions": [] },
+  "type": "fiat-backed",
+  "supported_chains": [
+    "ethereum", "tron", "solana", "bnb-chain", "polygon", "avalanche",
+    "arbitrum", "optimism", "algorand", "eos", "liquid-network", "omni",
+    "ton", "bitcoin-cash-slp"
+  ],
+  "badges": [
+    {
+      "code": "ATTESTATION_OR_AUDIT_LINKED",
+      "cadence": "quarterly",
+      "evidence_url": "https://tether.to/en/transparency/?tab=usdt"
+    },
+    {
+      "code": "REDEMPTION_POLICY_DISCLOSED",
+      "evidence_url": "https://tether.to/legal/"
+    }
+  ],
+  "regulatory_status": [
+    {
+      "jurisdiction": "EU",
+      "framework": "MiCA",
+      "status": "Not authorized as an EMT — Tether has publicly declined to pursue MiCA authorization, citing objections to reserve-composition rules; multiple EU exchanges have delisted or restricted USDT for EU users since 2024, with further forced conversions reported into mid-2026.",
+      "evidence_url": "https://www.techtimes.com/articles/319944/20260708/revolut-halts-usdt-eu-users-mica-reserve-law-triggers-forced-fiat-conversion.htm"
+    }
+  ],
+  "description": "The largest fiat-backed stablecoin by market cap, issued by Tether. Not authorized as a MiCA Electronic Money Token in the EU.",
+  "last_verified_at": "2026-07-12"
+}

@@ -1,0 +1,35 @@
+{
+  "ticker": "PYUSD",
+  "name": "PayPal USD",
+  "peg_currency": "USD",
+  "issuer": { "name": "Paxos Trust Company", "jurisdictions": ["US"] },
+  "type": "fiat-backed",
+  "supported_chains": ["ethereum", "solana"],
+  "badges": [
+    {
+      "code": "REGULATED_FRAMEWORK_ALIGNED",
+      "jurisdiction": "US",
+      "basis": "Issued by Paxos Trust Company, a New York limited purpose trust company chartered and supervised by NYDFS",
+      "evidence_url": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr20250806"
+    },
+    {
+      "code": "REDEMPTION_POLICY_DISCLOSED",
+      "evidence_url": "https://www.paxos.com/terms-and-conditions/stablecoin-terms-conditions"
+    },
+    {
+      "code": "ATTESTATION_OR_AUDIT_LINKED",
+      "cadence": "monthly",
+      "evidence_url": "https://www.paxos.com/pyusd-transparency"
+    }
+  ],
+  "regulatory_status": [
+    {
+      "jurisdiction": "US",
+      "framework": "NYDFS Limited Purpose Trust Charter",
+      "status": "Chartered and supervised",
+      "evidence_url": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr20250806"
+    }
+  ],
+  "description": "A fiat-backed USD stablecoin issued by Paxos Trust Company for PayPal, designed for payments.",
+  "last_verified_at": "2026-07-12"
+}

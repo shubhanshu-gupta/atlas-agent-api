@@ -1,0 +1,35 @@
+{
+  "ticker": "XSGD",
+  "name": "XSGD",
+  "peg_currency": "SGD",
+  "issuer": { "name": "StraitsX (Xfers Pte. Ltd.)", "jurisdictions": ["SG"] },
+  "type": "fiat-backed",
+  "supported_chains": ["ethereum", "polygon", "solana", "avalanche", "arbitrum", "xrp-ledger", "hedera", "base", "zilliqa"],
+  "badges": [
+    {
+      "code": "REGULATED_FRAMEWORK_ALIGNED",
+      "jurisdiction": "SG",
+      "basis": "Major Payment Institution license under the Payment Services Act, held via Xfers Pte. Ltd.",
+      "evidence_url": "https://eservices.mas.gov.sg/fid/institution/detail/226546-XFERS-PTE-LTD"
+    },
+    {
+      "code": "REDEMPTION_POLICY_DISCLOSED",
+      "evidence_url": "https://www.straitsx.com/legal/purchasing-and-redemption"
+    },
+    {
+      "code": "ATTESTATION_OR_AUDIT_LINKED",
+      "cadence": "monthly",
+      "evidence_url": "https://www.straitsx.com/xsgd"
+    }
+  ],
+  "regulatory_status": [
+    {
+      "jurisdiction": "SG",
+      "framework": "Payment Services Act — Major Payment Institution",
+      "status": "Licensed (via Xfers Pte. Ltd.)",
+      "evidence_url": "https://eservices.mas.gov.sg/fid/institution/detail/226546-XFERS-PTE-LTD"
+    }
+  ],
+  "description": "A stablecoin pegged to the Singapore Dollar, issued by StraitsX and licensed as a Major Payment Institution by MAS.",
+  "last_verified_at": "2026-07-12"
+}

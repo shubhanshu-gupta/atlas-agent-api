@@ -1,0 +1,35 @@
+{
+  "ticker": "EURC",
+  "name": "EURC",
+  "peg_currency": "EUR",
+  "issuer": { "name": "Circle", "jurisdictions": ["US", "SG", "EU"] },
+  "type": "fiat-backed",
+  "supported_chains": ["avalanche", "base", "ethereum", "solana", "stellar", "cronos", "world-chain"],
+  "badges": [
+    {
+      "code": "ATTESTATION_OR_AUDIT_LINKED",
+      "cadence": "monthly",
+      "evidence_url": "https://www.circle.com/transparency"
+    },
+    {
+      "code": "REDEMPTION_POLICY_DISCLOSED",
+      "evidence_url": "https://www.circle.com/legal/eurc-terms"
+    },
+    {
+      "code": "REGULATED_FRAMEWORK_ALIGNED",
+      "jurisdiction": "EU",
+      "basis": "MiCA Electronic Money Token (EMT) authorization via Circle Mint France, an ACPR-authorized EMI",
+      "evidence_url": "https://www.circle.com/pressroom/circle-is-first-global-stablecoin-issuer-to-comply-with-mica-eus-landmark-crypto-law"
+    }
+  ],
+  "regulatory_status": [
+    {
+      "jurisdiction": "EU",
+      "framework": "MiCA",
+      "status": "EMT authorized (issued via Circle Mint France, ACPR-licensed EMI)",
+      "evidence_url": "https://www.circle.com/pressroom/circle-is-first-global-stablecoin-issuer-to-comply-with-mica-eus-landmark-crypto-law"
+    }
+  ],
+  "description": "A euro-backed, fiat-collateralized stablecoin issued by Circle, authorized as a MiCA Electronic Money Token.",
+  "last_verified_at": "2026-07-12"
+}

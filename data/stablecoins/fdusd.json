@@ -1,0 +1,29 @@
+{
+  "ticker": "FDUSD",
+  "name": "First Digital USD",
+  "peg_currency": "USD",
+  "issuer": { "name": "First Digital Trust Limited", "jurisdictions": ["HK"] },
+  "type": "fiat-backed",
+  "supported_chains": ["ethereum", "bnb-chain", "solana", "sui"],
+  "badges": [
+    {
+      "code": "ATTESTATION_OR_AUDIT_LINKED",
+      "cadence": "monthly",
+      "evidence_url": "https://www.firstdigitallabs.com/transparency"
+    },
+    {
+      "code": "REDEMPTION_POLICY_DISCLOSED",
+      "evidence_url": "https://www.firstdigitallabs.com/legal/fdd-terms"
+    }
+  ],
+  "regulatory_status": [
+    {
+      "jurisdiction": "HK",
+      "framework": "Trust or Company Service Provider (TCSP) Licence",
+      "status": "First Digital Trust Limited holds TCSP Licence No. TC006771 under the Hong Kong Companies Registry; stablecoin issuance itself is not separately licensed — the issuer states it is 'actively working to secure regulatory authorisation for its stablecoin issuance.'",
+      "evidence_url": "https://1stdigital.com/legal-and-regulatory/"
+    }
+  ],
+  "description": "A fiat-backed USD stablecoin issued by First Digital Trust Limited in Hong Kong. Note: in 2024, Tron founder Justin Sun publicly accused First Digital Trust of misappropriating reserves belonging to TrueUSD (a separate, unrelated token); FDUSD briefly depegged amid the controversy despite the dispute not concerning its own reserves, which were independently reattested afterward.",
+  "last_verified_at": "2026-07-12"
+}

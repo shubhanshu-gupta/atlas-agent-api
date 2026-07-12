@@ -1,0 +1,25 @@
+{
+  "ticker": "EURS",
+  "name": "STASIS EURO",
+  "peg_currency": "EUR",
+  "issuer": { "name": "STASIS (STSS (Malta) Limited)", "jurisdictions": ["MT"] },
+  "type": "fiat-backed",
+  "supported_chains": ["ethereum", "polygon", "xdc", "stellar"],
+  "badges": [
+    {
+      "code": "ATTESTATION_OR_AUDIT_LINKED",
+      "cadence": "quarterly",
+      "evidence_url": "https://stasis.net/transparency"
+    }
+  ],
+  "regulatory_status": [
+    {
+      "jurisdiction": "EU",
+      "framework": "MiCA",
+      "status": "Not authorized — reportedly removed from ESMA's MiCA Electronic Money Token register after STASIS suspended new EURS issuance in 2024. This status is sourced from secondary reporting, not a direct primary-source read of the ESMA register, and should be independently reconfirmed.",
+      "evidence_url": "https://en.cryptonomist.ch/2026/07/06/mica-euro-stablecoins-growth/"
+    }
+  ],
+  "description": "A euro-backed stablecoin issued by STASIS. New issuance has been suspended since 2024 and on-chain activity has declined materially (~88% drop in monthly transfer volume as of mid-2026); treat as a legacy, wind-down-adjacent asset rather than an actively growing stablecoin.",
+  "last_verified_at": "2026-07-12"
+}

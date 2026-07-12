@@ -1,0 +1,24 @@
+{
+  "ticker": "DAI",
+  "name": "Dai (Sky Protocol)",
+  "peg_currency": "USD",
+  "issuer": { "name": "Sky (formerly MakerDAO)", "jurisdictions": [] },
+  "type": "crypto-backed",
+  "supported_chains": ["ethereum"],
+  "badges": [
+    {
+      "code": "REDEMPTION_POLICY_DISCLOSED",
+      "evidence_url": "https://developers.skyeco.com/guides/psm/litepsm/"
+    }
+  ],
+  "regulatory_status": [
+    {
+      "jurisdiction": "Global",
+      "framework": "N/A — decentralized protocol, no financial services license",
+      "status": "Sky (Skybase International) states it is not a broker, dealer, exchange, investment adviser, custodian, or financial service provider of any kind, and explicitly flags ongoing regulatory uncertainty across jurisdictions rather than claiming any license.",
+      "evidence_url": "https://docs.sky.money/user-risks"
+    }
+  ],
+  "description": "A decentralized, crypto-collateralized stablecoin (CDP-based) managed by Sky. Reserves are transparent on public on-chain dashboards (e.g. daistats.com, makerburn.com) rather than third-party attested. Sky is migrating holders to a successor token, USDS, which surpassed DAI in market cap during 2026; DAI remains live and redeemable 1:1 via the SkyMoneyConverter and Peg Stability Module.",
+  "last_verified_at": "2026-07-12"
+}
