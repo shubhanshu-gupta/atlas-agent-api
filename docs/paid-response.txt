@@ -1,0 +1,117 @@
+circle services pay http://localhost:8080/v1/stablecoins/usdc \
+  --address 0xdfbf47bddc8e64c8091672e2f911d2aa90570577 \
+  --chain ARC-TESTNET \
+  --max-amount 0.001 \
+  --output json
+
+{
+  "data": {
+    "response": {
+      "ticker": "USDC",
+      "name": "USD Coin",
+      "peg_currency": "USD",
+      "issuer": {
+        "name": "Circle",
+        "jurisdictions": [
+          "US",
+          "SG",
+          "EU"
+        ]
+      },
+      "type": "fiat-backed",
+      "supported_chains": [
+        "algorand",
+        "aptos",
+        "arbitrum",
+        "avalanche",
+        "base",
+        "celo",
+        "codex",
+        "cronos",
+        "edge-chain",
+        "ethereum",
+        "hedera",
+        "hyperevm",
+        "injective",
+        "ink",
+        "linea",
+        "monad",
+        "morph",
+        "near",
+        "noble",
+        "op-mainnet",
+        "pharos",
+        "plume",
+        "polkadot",
+        "polygon",
+        "sei",
+        "solana",
+        "sonic",
+        "starknet",
+        "stellar",
+        "sui",
+        "unichain",
+        "world-chain",
+        "xdc",
+        "xrp-ledger",
+        "zksync"
+      ],
+      "badges": [
+        {
+          "code": "ATTESTATION_OR_AUDIT_LINKED",
+          "cadence": "monthly",
+          "evidence_url": "https://www.circle.com/transparency"
+        },
+        {
+          "code": "REDEMPTION_POLICY_DISCLOSED",
+          "evidence_url": "https://www.circle.com/legal/usdc-terms"
+        },
+        {
+          "code": "REGULATED_FRAMEWORK_ALIGNED",
+          "jurisdiction": "EU",
+          "basis": "MiCA Electronic Money Token (EMT) authorization via Circle Mint France, an ACPR-authorized EMI",
+          "evidence_url": "https://www.circle.com/pressroom/circle-is-first-global-stablecoin-issuer-to-comply-with-mica-eus-landmark-crypto-law"
+        },
+        {
+          "code": "REGULATED_FRAMEWORK_ALIGNED",
+          "jurisdiction": "SG",
+          "basis": "Major Payment Institution (MPI) license from the Monetary Authority of Singapore",
+          "evidence_url": "https://eservices.mas.gov.sg/fid/institution/detail/412248-CIRCLE-INTERNET-SINGAPORE-PTE-LTD"
+        }
+      ],
+      "regulatory_status": [
+        {
+          "jurisdiction": "EU",
+          "framework": "MiCA",
+          "status": "EMT authorized (issued via Circle Mint France, ACPR-licensed EMI)",
+          "evidence_url": "https://www.circle.com/pressroom/circle-is-first-global-stablecoin-issuer-to-comply-with-mica-eus-landmark-crypto-law"
+        },
+        {
+          "jurisdiction": "SG",
+          "framework": "Payment Services Act — Major Payment Institution",
+          "status": "Licensed",
+          "evidence_url": "https://eservices.mas.gov.sg/fid/institution/detail/412248-CIRCLE-INTERNET-SINGAPORE-PTE-LTD"
+        }
+      ],
+      "description": "A fully reserved, fiat-backed stablecoin pegged to the US Dollar, issued by Circle.",
+      "last_verified_at": "2026-07-12",
+      "source": "stablecoinatlas.app",
+      "disclaimer": "Informational only; not financial, investment, legal, or tax advice. Regulatory status may change; verify via linked evidence."
+    },
+    "payment": {
+      "amount": "$0.001 USDC",
+      "chain": "eip155:5042002",
+      "scheme": "GatewayWalletBatched",
+      "seller": "0x6a4e03a54983b34167cc9ee5b3ffce1d7c3d02c6",
+      "receipt": "eyJzdWNjZXNzIjp0cnVlLCJ0cmFuc2FjdGlvbiI6IjhjNWUyOGI0LTkwNjktNDg3MS04MThkLTAzOWU2YzBjZDFjYyIsIm5ldHdvcmsiOiJlaXAxNTU6NTA0MjAwMiIsInBheWVyIjoiMHhiNGNjMDZkNzQ0NmI0ZDUxZGJjNjMzN2RjZmE1ZTFkNGMzY2JiZGIxIn0="
+    }
+  }
+}
+
+Decoded payment.receipt (base64 -> JSON):
+{
+  "success": true,
+  "transaction": "8c5e28b4-9069-4871-818d-039e6c0cd1cc",
+  "network": "eip155:5042002",
+  "payer": "0xb4cc06d7446b4d51dbc6337dcfa5e1d4c3cbbdb1"
+}
