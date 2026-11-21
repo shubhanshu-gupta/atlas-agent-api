@@ -69,17 +69,56 @@ app.get("/v1/stablecoins", (_req, res) => {
 
 // --- Paid endpoint -----------------------------------------------------------
 
-app.get("/v1/stablecoins/:ticker", paidGate, (req, res) => {
-  const profile = getProfile(req.params.ticker);
-  if (!profile) {
+// Reject unknown tickers BEFORE the payment gate. The Gateway middleware
+// settles inline before calling the handler, so a 404 checked afterwards
+// would mean the agent already paid for nothing.
+const requireKnownTicker: RequestHandler = (req, res, next) => {
+  if (!getProfile(req.params.ticker)) {
     res.status(404).json({
       error: "unknown_ticker",
       hint: "GET /v1/stablecoins for available tickers",
+      source: SOURCE,
+      disclaimer: DISCLAIMER,
     });
     return;
   }
-  res.json({ ...profile, source: SOURCE, disclaimer: DISCLAIMER });
-});
+  next();
+};
+
+// Compliance: every response carries `source` and `disclaimer`. The Gateway
+// middleware writes its 402/4xx bodies with raw res.end(JSON), so merge the
+// fields in at that layer. Success responses are left to the handler.
+const withComplianceFields: RequestHandler = (_req, res, next) => {
+  const originalEnd = res.end.bind(res) as (...args: unknown[]) => typeof res;
+  res.end = ((chunk?: unknown, ...rest: unknown[]) => {
+    const isJson = String(res.getHeader("Content-Type") ?? "").includes("application/json");
+    if (res.statusCode >= 400 && isJson && chunk != null && !res.headersSent) {
+      try {
+        const body: unknown = JSON.parse(Buffer.isBuffer(chunk) ? chunk.toString("utf8") : String(chunk));
+        if (body && typeof body === "object" && !Array.isArray(body)) {
+          chunk = JSON.stringify({ ...body, source: SOURCE, disclaimer: DISCLAIMER });
+          res.removeHeader("Content-Length");
+        }
+      } catch {
+        // Not a JSON body; pass it through untouched.
+      }
+    }
+    return originalEnd(chunk, ...rest);
+  }) as typeof res.end;
+  next();
+};
+
+app.get(
+  "/v1/stablecoins/:ticker",
+  requireKnownTicker,
+  withComplianceFields,
+  paidGate,
+  (req, res) => {
+    // requireKnownTicker guarantees the profile exists.
+    const profile = getProfile(req.params.ticker)!;
+    res.json({ ...profile, source: SOURCE, disclaimer: DISCLAIMER });
+  }
+);
 
 app.listen(PORT, () => {
   console.log(
